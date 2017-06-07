@@ -2,6 +2,9 @@
 
 #set -x
 
+Variables
+	SERVER="server_name"
+
 date > $(hostname).sudoers.list
 
 for i in $(cat /etc/passwd | cut -d ":" -f1); do
@@ -14,4 +17,4 @@ for i in $(cat /etc/passwd | cut -d ":" -f1); do
 
 done
 
-scp $(hostname).sudoers.list rc699t@rcipams1.ims.att.com:/home/rc699t
+scp $(hostname).sudoers.list rc699t@$SERVER:/home/rc699t
