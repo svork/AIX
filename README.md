@@ -1,2 +1,1 @@
-# mksysb
-AIX mksysb related scripts
+AIX scripts
