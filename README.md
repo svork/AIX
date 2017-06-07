@@ -1,1 +1,2 @@
+#AIX
 AIX scripts
