@@ -18,10 +18,8 @@
 
 	FILE='/usr/bin/file'
 
-	XARGS='/usr/bin/xargs'
-
 	RM='/usr/bin/rm'
 
 # Using find to retrieve and delete files older than 3 months
 
-$FIND $MKSYSB_DIR -mtime +90 | $XARGS $FILE >> $LOG_FILE 2>&1
+$FIND $MKSYSB_DIR -mtime +90 | $RM -e $FILE >> $LOG_FILE 2>&1
