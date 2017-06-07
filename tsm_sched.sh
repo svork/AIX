@@ -25,7 +25,7 @@
 	MAIL="/usr/bin/mail"
 
 	# Insert here the TSM Support email address and/or phone number
-	MAIL_Address="evandrol@br.ibm.com wallaceg@br.ibm.com"
+	MAIL_Address="mail_address"
 
 # Checking if the TSM Sched process is running, by evaluating its RC
 if [ $TSM_SCHED -eq 0 ]; then
