@@ -13,6 +13,9 @@
 
 # Variables
 
+	# mail addresses
+	MAIL_ADDR="mail_adresses"
+
 	# hostname
 	HOSTNAME="$(hostname)"
 
@@ -26,7 +29,7 @@
 	LOCAL_DIR="/mksysb_dir"
 
 	# NIM Server
-	NIM_SERVER="rcipams1.ims.att.com"
+	NIM_SERVER="server_name"
 
 	# NIM mount point 
 	NIM_DIR="/export/mksysb/bkups"
@@ -120,12 +123,12 @@ else
 	if [[ $RC_1 -eq 0 && $RC_2 -eq 0 ]]; then
 		
 		# mksysb went fine, sending an email to the SA team
-		$MAIL -s "mksysb has been succesfully completed on $HOSTNAME" jfontes@br.ibm.com ulissesn@br.ibm.com rolimac@br.ibm.com < /dev/null 
+		$MAIL -s "mksysb has been succesfully completed on $HOSTNAME" $MAIL_ADDR < /dev/null 
 
 	else
 
 		# mksysb has failed, sending an email to the SA team	
-		$MAIL -s "mksysb has failed on $HOSTNAME" jfontes@br.ibm.com ulissesn@br.ibm.com rolimac@br.ibm.com < /dev/null 
+		$MAIL -s "mksysb has failed on $HOSTNAME" $MAIL_ADDR < /dev/null 
 
 	fi
 
