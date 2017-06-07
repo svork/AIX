@@ -6,7 +6,7 @@
 # This script is intended to retrieve data from an AIX server
 # regarding SSH settings and export them to an XML file
 
-# Rodrigo Costa - rc699t - rolimac@br.ibm.com - 2017/FEB/10
+# Rodrigo Costa - rc699t - 2017/FEB/10
 
 # -------- Variables --------
 OUT_FILE="/home/rc699t/$(hostname).xml"
